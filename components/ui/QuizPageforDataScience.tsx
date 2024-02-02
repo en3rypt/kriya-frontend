@@ -11,7 +11,7 @@ export default function QuizPageforDataScience({ index,setquizIndexQnNumber,quiz
         <div
         className=' flex w-1/2 mx-auto justify-between '
         >
-          <Button text='Prev' quizDataLength={quizData.length}  index={index} setquizIndexQnNumber={setquizIndexQnNumber} onclick={()=>{
+          <Button text={`${index === 0?"":"Prev"}`} quizDataLength={quizData.length}  index={index} setquizIndexQnNumber={setquizIndexQnNumber} onclick={()=>{
             if(index <= 0){
               setquizIndexQnNumber(0);
             }
@@ -19,7 +19,7 @@ export default function QuizPageforDataScience({ index,setquizIndexQnNumber,quiz
               setquizIndexQnNumber((prev)=>(prev-1) % quizData.length);
             }
           }}/>
-          <Button text='Next' quizDataLength={quizData.length} index={index} setquizIndexQnNumber={setquizIndexQnNumber} onclick={()=>{
+          <Button text={`${index === quizData.length - 1?"":"Next"}`} quizDataLength={quizData.length} index={index} setquizIndexQnNumber={setquizIndexQnNumber} onclick={()=>{
             setquizIndexQnNumber((prev)=>(prev+1) % quizData.length);
           }}/>
         </div>

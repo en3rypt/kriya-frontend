@@ -1,3 +1,4 @@
+import React from "react";
 import QuizPage from "../components/ui/QuizPage";
 import Home from "./screens/Home";
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
@@ -7,7 +8,6 @@ import ItsANoun from "../components/ui/ItsANoun";
 import DevelopersPage from "../components/ui/DevelopersPage";
 import QuizPageforDataScience from "../components/ui/QuizPageforDataScience";
 import quizDataForSoftwareDev from "./constants/questions.json";
-import React from "react";
 
 function App() {
   const quizData = quizDataForSoftwareDev;

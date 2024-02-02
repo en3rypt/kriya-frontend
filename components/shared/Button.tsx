@@ -30,7 +30,7 @@ export default function Button({
           className='text-6xl bg-gradient-to-r from-green-400 to-violet-400 text-transparent bg-clip-text'
           onClick={onclick}
         >
-          {(text === 'Next' && index === quizDataLength-1) ? "" : text}
+          {text}
         </button>
       )}
     </div>
