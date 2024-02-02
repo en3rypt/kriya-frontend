@@ -6,7 +6,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/softwareDevQuiz" element={<QuizPage/>} />
+        <Route path="/softwareDevQuiz" element={<QuizPage index={0}/>} />
       </Routes>
     </Router>
   </div>;

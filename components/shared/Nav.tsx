@@ -5,11 +5,12 @@ import kriyaLogo from "../../assets/Kriya_Logo.jpg";
 import amcsText from "../../assets/amcsText.svg";
 import kriyaText from "../../assets/kriyaText.svg";
 import collegeName from "../../assets/collegeNameText.svg";
-import bgGirl from "../../assets/bgGirlPic.png";
 import xMark from "../../assets/xMark.svg";
 export default function Nav() {
   return (
-    <>
+    <main
+    className='px-5 py-3'
+    >
         <section
       className=" flex w-full justify-end gap-10 "
       >
@@ -36,6 +37,6 @@ export default function Nav() {
           <img src={collegeName} alt="Logo" className=" h-6 w-18" />
         </nav>
       </section>
-    </>
+    </main>
   )
 }
