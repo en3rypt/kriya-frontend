@@ -15,7 +15,8 @@ export default {
         "gradient2":"#1D55B6"
       },
       fontFamily: {
-        "Montserrat":["Montserrat","sans"]
+        "Montserrat":["Montserrat","sans"],
+        "Andika":["Andika","mono"]
       },
     },
   },

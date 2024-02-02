@@ -5,14 +5,26 @@ import bgGirl from "../../assets/bgGirlPic.png";
 import Nav from '../shared/Nav';
 import TickMark from "../../assets/TickMark.svg";
 import Congrats from '../shared/Congrats';
-
+import CustomAlert from '../shared/CustomAlert';
+import { useNavigate } from 'react-router-dom';
 export default function QuizPage({ index,setquizIndexQnNumber }) {
   const quizData: Quiz[] = data;
+  const navigate = useNavigate();
   const [hintsIndex, setHintsIndex] = useState<number>(-1);
   const [showHint, setShowHint] = useState<boolean>(false);
   const [answer, setanswer] = useState("");  
   const handleAnswerSubmissison = ()=>{
+    // if(quizData[index].answer?.includes(answer)){
+    //   setquizIndexQnNumber(index+1);
+    // }
+    // else{
+    //  CustomAlert();
+    // }
+    if(answer.includes("ing")){
+      navigate("/itsNoun")
+    }
     setquizIndexQnNumber(index+1);
+
   }
   if(index >= quizData.length){
     return(
@@ -32,6 +44,11 @@ export default function QuizPage({ index,setquizIndexQnNumber }) {
             <input type="text" placeholder='Enter Your Response' className=' bg-inherit px-6 py-3 font-Montserrat ring-2 rounded-sm ' 
               onChange={(e)=>{
                 setanswer(e.target.value);
+              }}
+              onKeyUpCapture={(e)=>{
+                if(e.key === "Enter"){
+                  handleAnswerSubmissison();
+                }
               }}
             />
             <button
