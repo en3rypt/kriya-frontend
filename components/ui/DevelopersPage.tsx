@@ -12,7 +12,7 @@ export default function DevelopersPage() {
     },
     {
         name:"Sanjith",
-        class:"Software Systems 2k19"
+        class:"Software Systems 2k20"
     }
   ]
   return (
