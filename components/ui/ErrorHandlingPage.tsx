@@ -11,7 +11,7 @@ export default function ErrorHandlingPage() {
         className=' text-3xl bg-gradient-to-tr from-text-color to-text-color3 text-transparent bg-clip-text  '
         >
             You Tried Exploiting the Links!!
-            <span> Punishment <span className=' text-white'>🤔</span></span>
+            <span className=' text-white'>🤔</span>
             <p
              onClick={()=>{
                 navigate("/softwareDevQuiz");
