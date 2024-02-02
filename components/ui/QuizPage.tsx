@@ -4,11 +4,21 @@ import { Quiz } from '../../types';
 import bgGirl from "../../assets/bgGirlPic.png";
 import Nav from '../shared/Nav';
 import TickMark from "../../assets/TickMark.svg";
-export default function QuizPage({ index }: { index: number }) {
+import Congrats from '../shared/Congrats';
+
+export default function QuizPage({ index,setquizIndexQnNumber }) {
   const quizData: Quiz[] = data;
   const [hintsIndex, setHintsIndex] = useState<number>(-1);
   const [showHint, setShowHint] = useState<boolean>(false);
   const [answer, setanswer] = useState("");  
+  const handleAnswerSubmissison = ()=>{
+    setquizIndexQnNumber(index+1);
+  }
+  if(index >= quizData.length){
+    return(
+      <Congrats/>
+    )
+  }
   return (
     <div className='relative min-h-screen'>
       <Nav />
@@ -24,7 +34,9 @@ export default function QuizPage({ index }: { index: number }) {
                 setanswer(e.target.value);
               }}
             />
-            <button>
+            <button
+            onClick={handleAnswerSubmissison}
+            >
               <img src={TickMark} alt="" className=' h-14  ' />
             </button>
           </div>
