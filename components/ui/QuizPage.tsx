@@ -21,10 +21,9 @@ export default function QuizPage({ index,setquizIndexQnNumber }) {
     //  CustomAlert();
     // }
     if(answer.includes("ing")){
-      navigate("/itsNoun")
+      navigate(`/itsNoun?index=${index}`)
     }
     setquizIndexQnNumber(index+1);
-
   }
   if(index >= quizData.length){
     return(
