@@ -4,6 +4,7 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import { useState } from "react";
 import ErrorHandlingPage from "../components/ui/ErrorHandlingPage";
 import ItsANoun from "../components/ui/ItsANoun";
+import DevelopersPage from "../components/ui/DevelopersPage";
 function App() {
   const [quizIndexQnNumber, setquizIndexQnNumber] = useState(0);
   return <div className=" bg-background-color min-h-screen text-white ">
@@ -13,6 +14,7 @@ function App() {
         <Route path="/softwareDevQuiz" element={<QuizPage index={quizIndexQnNumber} setquizIndexQnNumber={setquizIndexQnNumber}/>}  />
         <Route path="*" element={<ErrorHandlingPage/>}/>
         <Route path="/itsNoun" element={<ItsANoun/>}/>
+        <Route path="/developers" element={<DevelopersPage/>}/>
       </Routes>
     </Router>
   </div>;

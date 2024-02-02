@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import data from "../../constants/questions.json";
+import data from "../../src/constants/questions.json";
 import { Quiz } from '../../types';
 import bgGirl from "../../assets/bgGirlPic.png";
 import Nav from '../shared/Nav';
