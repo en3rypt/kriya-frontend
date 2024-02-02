@@ -1,7 +1,10 @@
 import React from "react";
 import bgGirl from "../../assets/bgGirlPic.png";
 import Nav from "../../components/shared/Nav";
+import { Link } from "react-router-dom";
+
 export default function Home() {
+
   return (
     <div
     className=" px-5 py-3 "
@@ -22,11 +25,11 @@ export default function Home() {
         <ul
         className=" flex flex-col items-center justify-center gap-y-4 "
         >
-          <li
+          <Link to={`/softwareDevQuiz`}
           className="  w-full text-center text-white p-7 text-lg border font-semibold border-text-color rounded-xl "
           >
             Software development
-          </li>
+          </Link>
           <li
             className=" w-full text-center text-white p-7 text-lg border font-semibold border-text-color rounded-xl "
           >
