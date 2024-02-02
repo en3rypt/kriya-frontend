@@ -9,7 +9,7 @@ import xMark from "../../assets/xMark.svg";
 export default function Nav() {
   return (
     <main
-    className='px-5 py-3'
+    className=' px-4 py-7 '
     >
         <section
       className=" flex w-full justify-end gap-10 "

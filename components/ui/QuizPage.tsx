@@ -7,8 +7,7 @@ import TickMark from "../../assets/TickMark.svg";
 import Congrats from '../shared/Congrats';
 import CustomAlert from '../shared/CustomAlert';
 import { useNavigate } from 'react-router-dom';
-export default function QuizPage({ index,setquizIndexQnNumber }) {
-  const quizData: Quiz[] = data;
+export default function QuizPage({ index,setquizIndexQnNumber,quizData }) {
   const navigate = useNavigate();
   const [hintsIndex, setHintsIndex] = useState<number>(-1);
   const [showHint, setShowHint] = useState<boolean>(false);
@@ -31,7 +30,7 @@ export default function QuizPage({ index,setquizIndexQnNumber }) {
     )
   }
   return (
-    <div className='relative min-h-screen'>
+    <div className='relative min-h-screen overflow-hidden'>
       <Nav />
       <div className='flex justify-center h-[39vmax]'>
         <img src={bgGirl} alt="" className='flex justify-center opacity-30' />

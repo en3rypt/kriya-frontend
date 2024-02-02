@@ -30,11 +30,11 @@ export default function Home() {
           >
             Software development
           </Link>
-          <li
+          <Link to={`/dsQuiz`}
             className=" w-full text-center text-white p-7 text-lg border font-semibold border-text-color rounded-xl "
           >
             Data Science
-          </li>
+          </Link>
           <li
           className=" text-center w-full text-white p-7 text-lg border font-semibold border-text-color rounded-xl "
           >
