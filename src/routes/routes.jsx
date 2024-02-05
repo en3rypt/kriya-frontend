@@ -8,6 +8,10 @@ import {
 } from "react-router-dom";
 import Home from "../screens/Home";
 import QuizPage from "../../components/ui/QuizPage";
+import DevelopersPage from "../../components/ui/DevelopersPage";
+import QuizPageforDataScience from "../../components/ui/QuizPageforDataScience";
+import ErrorHandlingPage from "../../components/ui/ErrorHandlingPage";
+import Congrats from "../../components/shared/Congrats";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +19,16 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
+    path: "/developers",
+    element: <DevelopersPage />,
+  },
+  {
+    path: "/dsQuiz",
+    element: <QuizPageforDataScience />,
+  },
+  {
     path: "/softwareDevQuiz",
-    element: <Home />,
+    element: <QuizPage index={0} />,
   },
   {
     path: "/start",
@@ -51,7 +63,13 @@ const router = createBrowserRouter([
     element: <QuizPage index={7} />,
   },
   {
-    path: "/delete",
-    element: <Home />,
+    path: "/Congrats",
+    element: <Congrats />,
+  },
+  {
+    path: "*",
+    element: <ErrorHandlingPage />,
   },
 ]);
+
+export default router;
