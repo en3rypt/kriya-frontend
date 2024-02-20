@@ -5,7 +5,7 @@
       "I bring order to chaos, a digital librarian's touch,I'm a shared notation, a virtual pocket for your mind's hutch.",
       "I'm not just black and white, but a palette so grand, a canvas for thoughts, designed to stand,Like a digital scroll."
     ],
-    "answer": ["note", "notes app"],
+    "answer": ["notes", "notes app"],
     "navigateTo": "/notes"
   },
   {
@@ -70,6 +70,6 @@
       "erase not",
       "trash not"
     ],
-    "navigateTo": "/congrats"
+    "navigateTo": "/delete"
   }
 ]
