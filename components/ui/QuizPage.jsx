@@ -12,20 +12,27 @@ export default function QuizPage({ index }) {
   const [hintsIndex, setHintsIndex] = useState(-1);
   const [showHint, setShowHint] = useState(false);
   const [answer, setanswer] = useState("");
-  const [selectedHTTPMethod, setselectedHTTPMethod] = useState("");
+  const [selectedHTTPMethod, setselectedHTTPMethod] = useState("GET");
   const handleAnswerSubmissison = () => {
-    if (checkAnswer(answer, index)) {
+    if (checkAnswer(answer, index) ) {
       setanswer("");
       setShowHint(false);
-      navigate(quizData[index].navigateTo);
+      console.log(quizData[index]?.supportedMethods?.length);
+      if(quizData[index]?.supportedMethods?.length > 0){
+        if(quizData[index]?.supportedMethods.includes(selectedHTTPMethod)){
+          setselectedHTTPMethod("GET");
+          navigate(quizData[index].navigateTo);
+        }else{
+          alert("Please select correct http method");
+        }
+      }
+      if(quizData[index]?.supportedMethods?.length  === undefined){
+        navigate(quizData[index].navigateTo);
+      }
     } else {
       navigate("/its-a-noun");
     }
   };
-  const handleHTTPMethodChange = (e)=>{
-    setselectedHTTPMethod(e.target.value);
-    console.log(selectedHTTPMethod);
-  }
   return (
     <div
     >
@@ -42,23 +49,26 @@ export default function QuizPage({ index }) {
         >
         <div className=" w-5/6 mx-auto">
           <h1 className="text-5xl font-bold">{quizData[index].question}</h1>
+          <div className=" flex items-center  justify-center space-x-10 mt-10 ">
           {quizData[index]?.supportedMethods?.length > 0 && 
           <select
-          className=" text-text-color "
+          className=" text-text-color rounded-md p-2 text-2xl cursor-pointer flex items-center justify-center  "
+          onChange={(e)=>{
+            setselectedHTTPMethod(e.target.value);
+          }}
+          value={selectedHTTPMethod}
           >
             {
                 quizData[index].supportedMethods.map((httpmethod,index)=>{
                   return(
                     <option
                     key={index}
-                    onChange={handleHTTPMethodChange}
-                    value={httpmethod}
                     >{httpmethod}</option>
                   )
               })
             }
-          </select>}
-          <div className=" flex items-center  justify-center space-x-10 mt-10 ">
+          </select>
+          }
             <input
               value={answer}
               type="text"
