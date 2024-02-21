@@ -46,7 +46,7 @@ export default function DomainSpecifiedInstructions({domain}) {
           onClick={()=>{
               navigate(urlToNavigateTo)
           }}
-          className=' flex items-end w-full justify-end bg-gradient-to-r text-xl font-semibold   from-[#f46b45] to-[#c789429c] text-transparent bg-clip-text '
+          className=' flex items-end text-4xl font-semibold px-4 w-full justify-end bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text '
           >
             Start Your Quiz
           </button>
