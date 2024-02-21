@@ -12,7 +12,7 @@ import DevelopersPage from "../../components/ui/DevelopersPage";
 import QuizPageforDataScience from "../../components/ui/QuizPageforDataScience";
 import ErrorHandlingPage from "../../components/ui/ErrorHandlingPage";
 import Congrats from "../../components/shared/Congrats";
-
+import ItsANoun from "../../components/ui/ItsANoun";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -65,6 +65,10 @@ const router = createBrowserRouter([
   {
     path: "/Congrats",
     element: <Congrats />,
+  },
+  {
+    path: "/its-a-noun",
+    element: <ItsANoun />,
   },
   {
     path: "*",

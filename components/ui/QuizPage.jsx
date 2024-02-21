@@ -18,7 +18,7 @@ export default function QuizPage({ index }) {
       setanswer("");
       navigate(quizData[index].navigateTo);
     } else {
-      alert("Try Noun");
+      navigate("/its-a-noun");
     }
   };
 
@@ -31,6 +31,7 @@ export default function QuizPage({ index }) {
           <h1 className="text-5xl font-bold">{quizData[index].question}</h1>
           <div className=" flex items-center  justify-center space-x-10 mt-10 ">
             <input
+              value={answer}
               type="text"
               placeholder="Enter Your Response"
               className=" bg-inherit px-6 py-3 font-Montserrat ring-2 rounded-sm "
