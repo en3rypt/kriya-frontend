@@ -18,7 +18,11 @@ export default function Nav() {
         </nav>
         <nav className=" h-24 flex items-center space-x-5  ">
           <img src={psgLogoSvg} alt="Logo" className="h-16 rounded-sm" />
-          <h1 className=" text-lg font-Andika ">PSG COLLEGE OF TECHNOLOGY</h1>
+          <h1
+          className=" text-lg font-Andika "
+          >
+            PSG COLLEGE OF TECHNOLOGY
+          </h1>
         </nav>
       </section>
     </main>

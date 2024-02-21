@@ -12,6 +12,7 @@ export default function QuizPage({ index }) {
   const [hintsIndex, setHintsIndex] = useState(-1);
   const [showHint, setShowHint] = useState(false);
   const [answer, setanswer] = useState("");
+  const [selectedHTTPMethod, setselectedHTTPMethod] = useState("");
   const handleAnswerSubmissison = () => {
     if (checkAnswer(answer, index)) {
       setanswer("");
@@ -21,7 +22,10 @@ export default function QuizPage({ index }) {
       navigate("/its-a-noun");
     }
   };
-
+  const handleHTTPMethodChange = (e)=>{
+    setselectedHTTPMethod(e.target.value);
+    console.log(selectedHTTPMethod);
+  }
   return (
     <div
     >
@@ -38,6 +42,22 @@ export default function QuizPage({ index }) {
         >
         <div className=" w-5/6 mx-auto">
           <h1 className="text-5xl font-bold">{quizData[index].question}</h1>
+          {quizData[index]?.supportedMethods?.length > 0 && 
+          <select
+          className=" text-text-color "
+          >
+            {
+                quizData[index].supportedMethods.map((httpmethod,index)=>{
+                  return(
+                    <option
+                    key={index}
+                    onChange={handleHTTPMethodChange}
+                    value={httpmethod}
+                    >{httpmethod}</option>
+                  )
+              })
+            }
+          </select>}
           <div className=" flex items-center  justify-center space-x-10 mt-10 ">
             <input
               value={answer}
