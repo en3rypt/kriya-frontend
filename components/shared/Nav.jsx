@@ -1,7 +1,7 @@
 import React from "react";
 import psgLogoSvg from "../../assets/psgLogoSvg.svg";
 import amcsText from "../../assets/amcsText.svg";
-import kriyaText from "../../assets/kriyaText.svg";
+import kriyaText from "../../assets/KriyaText.svg";
 export default function Nav() {
   return (
     <main className=" px-4 py-7 ">
@@ -17,11 +17,7 @@ export default function Nav() {
         </nav>
         <nav className=" h-24 flex items-center space-x-5  ">
           <img src={psgLogoSvg} alt="Logo" className="h-16 rounded-sm" />
-          <h1
-          className=" text-lg font-Andika "
-          >
-            PSG COLLEGE OF TECHNOLOGY
-          </h1>
+          <h1 className=" text-lg font-Andika ">PSG COLLEGE OF TECHNOLOGY</h1>
         </nav>
       </section>
     </main>
