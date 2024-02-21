@@ -38,7 +38,7 @@ export default function QuizPage({ index }) {
         <img src={bgGirl} alt="bg-image" className="flex justify-center opacity-15 " />  
         </div>
         <div
-        className=" absolute  "
+        className=" absolute max-md:bg-background-color  "
         >
         <div className=" w-5/6 mx-auto">
           <h1 className="text-5xl font-bold">{quizData[index].question}</h1>
