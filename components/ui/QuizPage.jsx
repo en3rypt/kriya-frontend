@@ -7,7 +7,6 @@ import CustomAlert from "../shared/CustomAlert";
 import { useNavigate } from "react-router-dom";
 import quizData from "../../src/constants/questions.json";
 import { checkAnswer } from "../../src/utils/common";
-
 export default function QuizPage({ index }) {
   const navigate = useNavigate();
   const [hintsIndex, setHintsIndex] = useState(-1);
@@ -25,13 +24,19 @@ export default function QuizPage({ index }) {
 
   return (
     <div
-    className={` ${showHint ? "max-lg:h-[950px]" :""} `}
     >
-    <div className=" min-h-screen overflow-hidden">
+    <div className=" ">
       <Nav />
-      <div className="flex justify-center mb-[100px] ">
-        <img src={bgGirl} alt="" className="flex justify-center  opacity-15 " />
-        <div className="absolute mx-auto w-11/12 mt-5">
+      <div className="flex justify-center w-4/6 mx-auto  ">
+        <div
+        className=" absolute m-10  "
+        >
+        <img src={bgGirl} alt="" className="flex justify-center opacity-15  " />  
+        </div>
+        <div
+        className=" absolute  "
+        >
+        <div className=" w-4/6 mx-auto">
           <h1 className="text-5xl font-bold">{quizData[index].question}</h1>
           <div className=" flex items-center  justify-center space-x-10 mt-10 ">
             <input
@@ -52,6 +57,7 @@ export default function QuizPage({ index }) {
               <img src={TickMark} alt="" className=" h-14  " />
             </button>
           </div>
+          </div>
           {hintsIndex < quizData[index].hints?.length - 1 && (
             <div
               onClick={() => {
@@ -70,7 +76,12 @@ export default function QuizPage({ index }) {
             </div>
           )}
           {showHint && (
-            <div className=" mt-20 ">
+            <div
+            className={` ${showHint ? "" :"hidden"} bg-background-color bg-transparent `}
+            style={{
+              width: '100%'
+            }}
+            >
               {quizData[index].hints
                 ?.slice(0, hintsIndex + 1)
                 .map((hint, index) => {
