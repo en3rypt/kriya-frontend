@@ -4,7 +4,7 @@ export default function ItsANoun() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const navigate = useNavigate();
-  const qnIndex: number = Number(params.get("index"));
+  const qnIndex = Number(params.get("index"));
   return (
     <div className=" min-h-screen grid place-content-center ">
       <p className="">
