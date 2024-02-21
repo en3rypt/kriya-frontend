@@ -69,7 +69,7 @@ export default function QuizPage({ index }) {
                 );
                 setShowHint(true);
               }}
-              className=" mb-10 "
+              className=" bg-background-color bg-transparent "
             >
               <h1 className=" font-bold text-4xl  p-4 text-center cursor-pointer">
                 <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
@@ -80,10 +80,7 @@ export default function QuizPage({ index }) {
           )}
           {showHint && (
             <div
-            className={` ${showHint ? "" :"hidden"} bg-background-color   `}
-            style={{
-              width: '100%'
-            }}
+            className={` ${showHint ? "" :"hidden"} bg-background-color  `}
             >
               {quizData[index].hints
                 ?.slice(0, hintsIndex + 1)

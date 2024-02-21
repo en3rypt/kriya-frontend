@@ -13,6 +13,8 @@ import QuizPageforDataScience from "../../components/ui/QuizPageforDataScience";
 import ErrorHandlingPage from "../../components/ui/ErrorHandlingPage";
 import Congrats from "../../components/shared/Congrats";
 import ItsANoun from "../../components/ui/ItsANoun";
+import Forms from "../../components/ui/Forms";
+import GeneralInstructions from "../../components/shared/GeneralInstructions";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -74,6 +76,14 @@ const router = createBrowserRouter([
     path: "*",
     element: <ErrorHandlingPage />,
   },
+  {
+    path: "/cyberSecurity",
+    element: <Forms domain="cyber" />,
+  },
+  {
+    path: "/instructions",
+    element:<GeneralInstructions domain="cyber" />,
+  }
 ]);
 
 export default router;

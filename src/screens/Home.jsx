@@ -17,25 +17,35 @@ export default function Home() {
       <section className=" flex items-center justify-between m-24 h-[24vmin]  w-full mx-[32px] ">
         <ul className=" flex flex-col items-center justify-center gap-y-4 ">
           <Link
-            to={`/softwareDevQuiz`}
+            to={`/instructions?domain=webD`}
             className="  w-full text-center text-white p-7 text-lg border font-semibold border-text-color rounded-xl "
           >
             Software development
           </Link>
           <Link
-            to={`/dsQuiz`}
+            to={`/instructions?domain=dataScience`}
             className=" w-full text-center text-white p-7 text-lg border font-semibold border-text-color rounded-xl "
           >
             Data Science
           </Link>
-          <li className=" text-center w-full text-white p-7 text-lg border font-semibold border-text-color rounded-xl ">
-            Cyber Security
-          </li>
+          <Link to="/instructions?domain=cyber" 
+          className=" text-center w-full text-white p-7 text-lg border font-semibold border-text-color rounded-xl "
+          >
+            CyberSecurity
+          </Link>
         </ul>
         <div className="" style={{ backgroundColor: "#142035" }}>
           <img src={bgGirl} alt="" className="" />
         </div>
       </section>
+      <h1
+      className= " text-4xl "
+      >
+      <Link to={`/instructions?domain=cyber`}
+      >
+        Trial Link 
+      </Link>
+      </h1>
     </div>
   );
 }
