@@ -23,7 +23,7 @@
     "navigateTo": "/text-edit"
   },
   {
-    "question": "n the realm of notes, a seeker am I, No pages to flip, nor a vast sky. I find what's lost with digital grace, What am I, in the data embrace? ",
+    "question": "In the realm of notes, a seeker am I, No pages to flip, nor a vast sky. I find what's lost with digital grace, What am I, in the data embrace? ",
     "hints": [],
     "answer": ["search", "search bar"],
     "navigateTo": "/search"

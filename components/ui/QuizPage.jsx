@@ -16,6 +16,7 @@ export default function QuizPage({ index }) {
   const handleAnswerSubmissison = () => {
     if (checkAnswer(answer, index)) {
       setanswer("");
+      setShowHint(false);
       navigate(quizData[index].navigateTo);
     } else {
       navigate("/its-a-noun");
@@ -23,10 +24,13 @@ export default function QuizPage({ index }) {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div
+    className={` ${showHint ? "max-lg:h-[950px]" :""} `}
+    >
+    <div className=" min-h-screen overflow-hidden">
       <Nav />
-      <div className="flex justify-center h-[39vmax]">
-        <img src={bgGirl} alt="" className="flex justify-center opacity-30" />
+      <div className="flex justify-center mb-[100px] ">
+        <img src={bgGirl} alt="" className="flex justify-center  opacity-15 " />
         <div className="absolute mx-auto w-11/12 mt-5">
           <h1 className="text-5xl font-bold">{quizData[index].question}</h1>
           <div className=" flex items-center  justify-center space-x-10 mt-10 ">
@@ -82,6 +86,7 @@ export default function QuizPage({ index }) {
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 }
