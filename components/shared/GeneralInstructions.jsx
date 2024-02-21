@@ -48,7 +48,6 @@ export default function GeneralInstructions({domain}) {
             </ul>
         </main>
         <DomainSpecifiedInstructions domain={specifiedDomain}/>
-
     </div>
   )
 }

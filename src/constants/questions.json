@@ -14,31 +14,41 @@
       "I begin with a tap, a digital rap. A click or a swipe, I come to life.  "
     ],
     "answer": ["creat"],
+    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
+    "answerToHttpMethodUsage":["POST"],
     "navigateTo": "/create"
   },
   {
     "question": "I let you change how words appear, Make them bold or just a bit clear. With a click, you can rearrange, In the world of text, I bring the change.",
     "hints": [],
     "answer": ["text edit", "edit", "edit"],
-    "navigateTo": "/text-edit"
+    "navigateTo": "/text-edit",
+    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
+    "answerToHttpMethodUsage":["PUT","PATCH"]
   },
   {
-    "question": "n the realm of notes, a seeker am I, No pages to flip, nor a vast sky. I find what's lost with digital grace, What am I, in the data embrace? ",
+    "question": "In the realm of notes, a seeker am I, No pages to flip, nor a vast sky. I find what's lost with digital grace, What am I, in the data embrace? ",
     "hints": [],
     "answer": ["search", "search bar"],
-    "navigateTo": "/search"
+    "navigateTo": "/search",
+    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
+    "answerToHttpMethodUsage":["GET"]
   },
   {
     "question": "I'm a tidy array, a tasktime guide, Sequential order, I won't hide. Check me off as progress flows, What am I in the tasks' repose? ",
     "hints": [],
     "answer": ["checklist", "to-do list", "task", "task list"],
-    "navigateTo": "/checklist"
+    "navigateTo": "/checklist",
+    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
+    "answerToHttpMethodUsage":["PUT","DELETE"]
   },
   {
     "question": "I linger not at the task's inception, My whisper emerges on the path's reflection. As moments elapse and deadlines near, I subtly arrive, a temporal seer. I organize your mind's maze, With colors, tags, and different ways. ",
     "hints": [],
     "answer": ["remind", "notif", "alarm", "alert"],
-    "navigateTo": "/reminder"
+    "navigateTo": "/reminder",
+    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
+    "answerToHttpMethodUsage":["POST","GET"]
   },
   {
     "question": "I'm not a word, but I'm still part of the page, What am I, adding a visual engage?",
@@ -55,7 +65,9 @@
       "add pictur",
       "add photo"
     ],
-    "navigateTo": "/image-attachment"
+    "navigateTo": "/image-attachment",
+    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
+    "answerToHttpMethodUsage":["POST"]
   },
   {
     "question": "From existence, I depart,sweeping away in one swift zoom,a removal with digital art.",
@@ -70,6 +82,8 @@
       "erase not",
       "trash not"
     ],
-    "navigateTo": "/congrats"
+    "navigateTo": "/congrats",
+    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
+    "answerToHttpMethodUsage":["DELETE"]
   }
 ]

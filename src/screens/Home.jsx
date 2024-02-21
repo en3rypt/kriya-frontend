@@ -38,14 +38,6 @@ export default function Home() {
           <img src={bgGirl} alt="" className="" />
         </div>
       </section>
-      <h1
-      className= " text-4xl "
-      >
-      <Link to={`/instructions?domain=cyber`}
-      >
-        Trial Link 
-      </Link>
-      </h1>
     </div>
   );
 }
