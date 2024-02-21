@@ -2,6 +2,7 @@ import React from "react";
 import psgLogoSvg from "../../assets/psgLogoSvg.svg";
 import amcsText from "../../assets/amcsText.svg";
 import kriyaText from "../../assets/KriyaText.svg";
+import CSLLogo from "../../assets/csl_logo.png";
 export default function Nav() {
   return (
     <main className=" px-4 py-7 ">
