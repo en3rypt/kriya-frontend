@@ -31,12 +31,12 @@ export default function QuizPage({ index }) {
         <div
         className=" absolute m-10  "
         >
-        <img src={bgGirl} alt="" className="flex justify-center opacity-15  " />  
+        <img src={bgGirl} alt="bg-image" className="flex justify-center opacity-15 " />  
         </div>
         <div
         className=" absolute  "
         >
-        <div className=" w-4/6 mx-auto">
+        <div className=" w-5/6 mx-auto">
           <h1 className="text-5xl font-bold">{quizData[index].question}</h1>
           <div className=" flex items-center  justify-center space-x-10 mt-10 ">
             <input
@@ -53,7 +53,9 @@ export default function QuizPage({ index }) {
                 }
               }}
             />
-            <button onClick={handleAnswerSubmissison}>
+            <button onClick={handleAnswerSubmissison}
+            className=" "
+            >
               <img src={TickMark} alt="" className=" h-14  " />
             </button>
           </div>
@@ -67,6 +69,7 @@ export default function QuizPage({ index }) {
                 );
                 setShowHint(true);
               }}
+              className=" mb-10 "
             >
               <h1 className=" font-bold text-4xl  p-4 text-center cursor-pointer">
                 <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
@@ -77,7 +80,7 @@ export default function QuizPage({ index }) {
           )}
           {showHint && (
             <div
-            className={` ${showHint ? "" :"hidden"} bg-background-color bg-transparent `}
+            className={` ${showHint ? "" :"hidden"} bg-background-color   `}
             style={{
               width: '100%'
             }}
