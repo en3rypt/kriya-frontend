@@ -5,7 +5,7 @@ import kriyaLogo from "../../assets/Kriya_Logo.jpg";
 import amcsText from "../../assets/amcsText.svg";
 import kriyaText from "../../assets/kriyaText.svg";
 import collegeName from "../../assets/collegeNameText.svg";
-import xMark from "../../assets/xMark.svg";
+import xMark from "../../assets/Xmark.svg";
 export default function Nav() {
   return (
     <main className=" px-4 py-7 ">
