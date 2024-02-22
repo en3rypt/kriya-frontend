@@ -6,25 +6,24 @@ export default function QuizPageforDataScience() {
   const [cluesIndex, setcluesIndex] = useState(0);
   const [isAnsCorrect,setisAnsCorrect] = useState(false);
   const [enteredPassword,setenteredPassword] = useState([]);
-  const handleSubmitButtonClick = (e) => {
+  const handleSubmitButtonClick = (e,index) => {
     e.preventDefault();
     const correctQuiz = dataScienceQuizData.find(
       (quiz) => quiz.password === checkPassword && !enteredPassword.includes(checkPassword)
     );
-  
     if (correctQuiz) {
       setisAnsCorrect(true);
       setenteredPassword((prev) => [...prev, checkPassword]);
-      localStorage.setItem("enteredPasswords", [...enteredPassword]);
+      const submittedFormsIndex = JSON.parse(localStorage.getItem('submittedFormsIndex')) || [];
+      submittedFormsIndex.push(index);
+      localStorage.setItem('submittedFormsIndex', JSON.stringify(submittedFormsIndex));      
       setcluesIndex(cluesIndex + 1);
     } else {
       alert("Please enter a valid password");
     }
-  
     setisAnsCorrect(false);
   };
-  
-  console.log(localStorage.getItem("enteredPasswords"));
+  const answeredFormsIndex = localStorage.getItem('submittedFormsIndex');
   return (
     <div>
       <h1 className=' text-center bg-gradient-to-tl from-teal-400 via-pink-400 to-orange-400 text-transparent bg-clip-text  font-bold text-4xl mt-[4%] '>
@@ -54,17 +53,23 @@ export default function QuizPageforDataScience() {
               className=' rounded-lg bg-gray-400 px-4 py-2  '
               onKeyDown={(e)=>{
                 if(e.key === "Enter"){
-                  handleSubmitButtonClick(e);
+                  handleSubmitButtonClick(e,index);
                 }
               }}
               />
-              <button 
+              {
+               !answeredFormsIndex?.includes(index) ? (
+                <button 
               type="submit"
               className=' font-Andika bg-gradient-to-r p-4 from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text font-bold text-xl '
-              onClick={handleSubmitButtonClick}
+              onClick={(e)=>{
+                handleSubmitButtonClick(e,index);
+              }}
               >
                 Submit
               </button>
+                ):""
+              }
             </div>
           )
         })
