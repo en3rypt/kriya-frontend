@@ -6,20 +6,24 @@ export default function QuizPageforDataScience() {
   const [cluesIndex, setcluesIndex] = useState(0);
   const [isAnsCorrect,setisAnsCorrect] = useState(false);
   const [enteredPassword,setenteredPassword] = useState([]);
-  const handleSubmitButtonClick = (e,index) => {
+  const handleSubmitButtonClick = async (e,index) => {
     e.preventDefault();
-    const correctQuiz = dataScienceQuizData.find(
-      (quiz) => quiz.password === checkPassword && !enteredPassword.includes(checkPassword)
-    );
-    if (correctQuiz) {
-      setisAnsCorrect(true);
-      setenteredPassword((prev) => [...prev, checkPassword]);
-      const submittedFormsIndex = JSON.parse(localStorage.getItem('submittedFormsIndex')) || [];
-      submittedFormsIndex.push(index);
-      localStorage.setItem('submittedFormsIndex', JSON.stringify(submittedFormsIndex));      
-      setcluesIndex(cluesIndex + 1);
-    } else {
-      alert("Please enter a valid password");
+    if(Array.isArray(dataScienceQuizData)){
+      await Promise.all(dataScienceQuizData?.forEach((quiz,indexMap)=>{
+        if(quiz?.password === checkPassword && indexMap === index && !enteredPassword.includes(checkPassword)){
+          setisAnsCorrect(true);
+          setenteredPassword((prev) => [...prev, checkPassword]);
+          const submittedFormsIndex = JSON.parse(localStorage.getItem('submittedFormsIndex')) || [];
+          submittedFormsIndex.push(index);
+          localStorage.setItem('submittedFormsIndex', JSON.stringify(submittedFormsIndex));      
+          setcluesIndex(cluesIndex + 1);     
+
+        }
+      }));
+    }
+    console.log(isAnsCorrect);
+    if(!isAnsCorrect){
+      alert("Please Enter a valid Password");
     }
     setisAnsCorrect(false);
   };
@@ -68,14 +72,18 @@ export default function QuizPageforDataScience() {
               >
                 Submit
               </button>
-                ):""
+                ):<button 
+                className=' font-Andika bg-gradient-to-r p-4 from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text font-bold text-xl '
+                >
+                  Already Done
+                </button>
               }
             </div>
           )
         })
       }
       <div
-      className=' mt-24 '
+      className=' mt-24 w-4/6 mx-auto '
       >
       {
         answeredFormsIndex?.length > 0 && (
