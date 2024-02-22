@@ -1,17 +1,21 @@
 [
     {
+        "name": "Logical Reasoning ",
         "formlink":"https://forms.gle/QhkUaHPjazCektqy7",
         "password":"cAABCtf4d1wRYao"
     },
     {
+        "name":"Verbal Reasoning",
         "formlink":"https://forms.gle/vnVL6RvGykZSgzNM9",
         "password":"uSl73rNBk38tt43"
     },
     {
+        "name":"Visual Analytics",
         "formlink":"https://forms.gle/KFzZpeVbFiLo5sAC6",
         "password":"F4ZiPm2Nn3y046u"
     },
     {
+        "name":"Pandas and SQL",
         "formlink":"https://forms.gle/jKUEzZEvkGvYzaMW7",
         "password":"1QYwo5VGAaJXuDP"
     }    

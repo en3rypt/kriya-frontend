@@ -41,14 +41,17 @@ export default function QuizPageforDataScience() {
             key={index}
             className=' max-lg:flex-col my-auto p-4 text-lg flex items-center justify-evenly w-full space-x-10 '
             >
-              {index+1})
-              <a 
-              href={link.formlink}
-              target='_blank'
-              className=' underline cursor-pointer '
+              {/* {index+1}) */}
+              <div
               >
-                {link.formlink}
-              </a>
+                <a 
+                href={link.formlink}
+                target='_blank'
+                className=' cursor-pointer hover:text-blue-600 hover:underline hover:underline-offset-2 '
+                >
+                  {link.name}
+                </a>
+              </div>
               <input type="password" onChange={(e)=>{
                 setcheckPassword(e.target.value);
               }}
@@ -63,7 +66,7 @@ export default function QuizPageforDataScience() {
                !answeredFormsIndex?.includes(index) ? (
                 <button 
               type="submit"
-              className=' font-Andika bg-gradient-to-r p-4 from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text font-bold text-xl '
+              className=' font-Andika text-center ml-[100px] bg-gradient-to-r p-4 from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text font-bold text-xl '
               onClick={(e)=>{
                 handleSubmitButtonClick(e,index);
               }}
@@ -71,7 +74,7 @@ export default function QuizPageforDataScience() {
                 Submit
               </button>
                 ):<button 
-                className=' font-Andika bg-gradient-to-r p-4 from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text font-bold text-xl '
+                className=' font-Andika bg-gradient-to-r p-4 via-green-500 to-indigo-400 text-transparent bg-clip-text font-bold text-xl '
                 >
                   Already Done
                 </button>
