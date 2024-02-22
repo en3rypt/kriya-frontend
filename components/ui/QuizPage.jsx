@@ -15,9 +15,8 @@ export default function QuizPage({ index }) {
     if (checkAnswer(answer, index) ) {
       setanswer("");
       setShowHint(false);
-      console.log(quizData[index]?.supportedMethods?.length);
       if(quizData[index]?.supportedMethods?.length > 0){
-        if(quizData[index]?.supportedMethods.includes(selectedHTTPMethod)){
+        if(quizData[index]?.answerToHttpMethodUsage.includes(selectedHTTPMethod)){
           setselectedHTTPMethod("GET");
           navigate(quizData[index].navigateTo);
         }else{
