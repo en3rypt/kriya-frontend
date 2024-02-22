@@ -27,7 +27,7 @@ export default function QuizPageforDataScience() {
   console.log(localStorage.getItem("enteredPasswords"));
   return (
     <div
-    className=" p-10 mt-[5%] max-md:mt-[50px]  h-[100vh] font-Montserrat grid place-content-center w-full "
+    className=" p-10 mt-[5%] max-md:mt-[50px] font-Montserrat grid place-content-center w-full "
     >
       {
         dataScienceQuizData.map((link,index)=>{
