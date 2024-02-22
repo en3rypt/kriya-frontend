@@ -82,7 +82,9 @@ export default function QuizPageforDataScience() {
           <div 
           className=' leading-10  '
           >
-          <h1>
+          <h1
+          className=' bg-gradient-to-br text-transparent bg-clip-text text-4xl font-bold font-Andika from-[#01D796] via-orange-400 to-pink-300 '
+          >
             Clues:
           </h1>
           {
@@ -90,9 +92,9 @@ export default function QuizPageforDataScience() {
               return(
                 <h2
                 key={index}
-                className=' font-Montserrat '
+                className=' text-center '
                 >
-                  <a className=' cursor-default ' href={clue} target='_blank'>{clue}</a>
+                  <a className=' cursor-default text-lg font-Montserrat font-semibold ' href={clue} target='_blank'>{clue}</a>
                 </h2>
               )
             })
