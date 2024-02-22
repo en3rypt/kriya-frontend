@@ -78,7 +78,7 @@ export default function QuizPageforDataScience() {
       className=' mt-24 '
       >
       {
-        cluesIndex > 0 && (
+        answeredFormsIndex?.length > 0 && (
           <div 
           className=' leading-10  '
           >
@@ -86,7 +86,7 @@ export default function QuizPageforDataScience() {
             Clues:
           </h1>
           {
-            dataScienceClues.slice(0,cluesIndex).map((clue,index)=>{
+            dataScienceClues.slice(0,Math.floor(answeredFormsIndex?.length/2)).map((clue,index)=>{
               return(
                 <h2
                 key={index}
