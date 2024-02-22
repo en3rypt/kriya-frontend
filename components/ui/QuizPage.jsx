@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import bgGirl from "../../assets/bgGirlPic.png";
 import Nav from "../shared/Nav";
 import TickMark from "../../assets/TickMark.svg";
-import Congrats from "../shared/Congrats";
-import CustomAlert from "../shared/CustomAlert";
 import { useNavigate } from "react-router-dom";
 import quizData from "../../src/constants/questions.json";
 import { checkAnswer } from "../../src/utils/common";
