@@ -1,14 +1,14 @@
 import React from "react";
 import psgLogoSvg from "../../assets/psgLogoSvg.svg";
 import amcsText from "../../assets/amcsText.svg";
-import kriyaText from "../../assets/KriyaText.svg";
 import CSLLogo from "../../assets/csl_logo.png";
+import KriyaLogo from "../../assets/KriyaLogo.png";
 export default function Nav() {
   return (
-    <main className=" px-4 py-7 ">
-      <section className=" flex w-full justify-end gap-10 ">
-        <nav className="h-24 flex justify-evenly ">
-          <img src={kriyaText} alt="Logo" className=" h-24 w-48  " />
+    <main className="  px-4 py-7 ">
+      <section className=" max-md:hidden flex w-full justify-end gap-10 items-center ">
+        <nav className="h-24 flex justify-evenly items-center ">
+          <img src={KriyaLogo} alt="Logo" className=" h-24 w-48 bg-[#ffffffbe] rounded-md " />
         </nav>
         <nav className="h-24 flex items-center space-x-5 ">
           <img src={CSLLogo} alt="Logo" className=" h-16 rounded-md " />

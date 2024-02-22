@@ -1,4 +1,4 @@
-import {useState,useEffect} from 'react';
+import {useState} from 'react';
 import { dataScienceClues } from '../../src/constants/dataScience';
 import dataScienceQuizData from '../../src/constants/dataScienceConstants.json';
 export default function QuizPageforDataScience() {
@@ -15,11 +15,9 @@ export default function QuizPageforDataScience() {
     if (correctQuiz) {
       setisAnsCorrect(true);
       setenteredPassword((prev) => [...prev, checkPassword]);
-      console.log("first");
       localStorage.setItem("enteredPasswords", JSON.stringify(enteredPassword));
       setcluesIndex(cluesIndex + 1);
     } else {
-      console.log("second");
       alert("Please enter a valid password");
     }
   
@@ -29,7 +27,7 @@ export default function QuizPageforDataScience() {
   console.log(localStorage.getItem("enteredPasswords"));
   return (
     <div
-    className=" h-[100vh] font-Montserrat grid place-content-center w-full "
+    className=" p-10 mt-[5%] max-md:mt-[50px]  h-[100vh] font-Montserrat grid place-content-center w-full "
     >
       {
         dataScienceQuizData.map((link,index)=>{
@@ -50,7 +48,7 @@ export default function QuizPageforDataScience() {
               }}
               className=' rounded-lg bg-gray-400 px-4 py-2  '
               onKeyDown={(e)=>{
-                if(e.keyCode === 13){
+                if(e.key === "Enter"){
                   handleSubmitButtonClick(e);
                 }
               }}
@@ -66,9 +64,14 @@ export default function QuizPageforDataScience() {
           )
         })
       }
+      <div
+      className=' mt-24 '
+      >
       {
         cluesIndex > 0 && (
-          <div>
+          <div 
+          className=' leading-10  '
+          >
           <h1>
             Clues:
           </h1>
@@ -87,6 +90,7 @@ export default function QuizPageforDataScience() {
         </div>
         )
       }
+      </div>
     </div>
   )
 }
