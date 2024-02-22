@@ -12,8 +12,12 @@ export default function Nav() {
         </nav>
         <nav className="h-24 flex items-center space-x-5 ">
           <img src={CSLLogo} alt="Logo" className=" h-16 rounded-md " />
-          <div className=" flex space-x-3 ">
-            <img src={amcsText} alt="Logo" className=" h-6  " />
+          <div className=" flex space-x-3   ">
+            <h1
+            className=" w-12 h-24 font-Andika text-2xl text-[#ffffffbe]  text-center mt-[50px] "
+            >
+              AMCS
+            </h1>
           </div>
         </nav>
         <nav className=" h-24 flex items-center space-x-5  ">

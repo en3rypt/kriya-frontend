@@ -4,14 +4,14 @@ import dataScienceQuizData from '../../src/constants/dataScienceConstants.json';
 export default function QuizPageforDataScience() {
   const [checkPassword, setcheckPassword] = useState("");
   const [cluesIndex, setcluesIndex] = useState(0);
-  const [isAnsCorrect,setisAnsCorrect] = useState(false);
   const [enteredPassword,setenteredPassword] = useState([]);
   const handleSubmitButtonClick = async (e,index) => {
     e.preventDefault();
-    if(Array.isArray(dataScienceQuizData)){
-      await Promise.all(dataScienceQuizData?.forEach((quiz,indexMap)=>{
+      let isCorrect = false;
+      dataScienceQuizData?.forEach((quiz,indexMap)=>{
+        console.log(quiz);
         if(quiz?.password === checkPassword && indexMap === index && !enteredPassword.includes(checkPassword)){
-          setisAnsCorrect(true);
+          isCorrect = true;
           setenteredPassword((prev) => [...prev, checkPassword]);
           const submittedFormsIndex = JSON.parse(localStorage.getItem('submittedFormsIndex')) || [];
           submittedFormsIndex.push(index);
@@ -19,13 +19,11 @@ export default function QuizPageforDataScience() {
           setcluesIndex(cluesIndex + 1);     
 
         }
-      }));
-    }
-    console.log(isAnsCorrect);
-    if(!isAnsCorrect){
+      });
+    
+    if(!isCorrect){
       alert("Please Enter a valid Password");
     }
-    setisAnsCorrect(false);
   };
   const answeredFormsIndex = localStorage.getItem('submittedFormsIndex');
   return (
