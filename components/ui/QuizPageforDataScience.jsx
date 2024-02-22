@@ -15,7 +15,7 @@ export default function QuizPageforDataScience() {
     if (correctQuiz) {
       setisAnsCorrect(true);
       setenteredPassword((prev) => [...prev, checkPassword]);
-      localStorage.setItem("enteredPasswords", JSON.stringify(enteredPassword));
+      localStorage.setItem("enteredPasswords", [...enteredPassword]);
       setcluesIndex(cluesIndex + 1);
     } else {
       alert("Please enter a valid password");
@@ -26,6 +26,10 @@ export default function QuizPageforDataScience() {
   
   console.log(localStorage.getItem("enteredPasswords"));
   return (
+    <div>
+      <h1 className=' text-center bg-gradient-to-tl from-teal-400 via-pink-400 to-orange-400 text-transparent bg-clip-text  font-bold text-4xl mt-[4%] '>
+        Enter Into The Links To Start Your Quiz 
+      </h1>
     <div
     className=" p-10 mt-[5%] max-md:mt-[50px] font-Montserrat grid place-content-center w-full "
     >
@@ -40,6 +44,7 @@ export default function QuizPageforDataScience() {
               <a 
               href={link.formlink}
               target='_blank'
+              className=' underline cursor-pointer '
               >
                 {link.formlink}
               </a>
@@ -91,6 +96,7 @@ export default function QuizPageforDataScience() {
         )
       }
       </div>
+    </div>
     </div>
   )
 }
