@@ -15,6 +15,7 @@ export default function Forms({domain}) {
      >
         <a href={formsURL} 
         target='_blank'
+        className=' bg-gradient-to-br from-violet-500 via-pink-600 to-green-400 text-transparent bg-clip-text font-bold text-8xl '
         >
             Click To Start the Quiz
         </a>
