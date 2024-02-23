@@ -34,6 +34,11 @@ export default function QuizPageforDataScience() {
     <div
     className=" p-10 mt-[5%] max-md:mt-[50px] font-Montserrat grid place-content-center w-full "
     >
+      <h1
+      className=' text-center text-3xl font-Andika '
+      >
+        The Below Are Links to the Forms
+      </h1>
       {
         dataScienceQuizData.map((link,index)=>{
           return(
@@ -74,7 +79,7 @@ export default function QuizPageforDataScience() {
                 Submit
               </button>
                 ):<button 
-                className=' font-Andika bg-gradient-to-r p-4 via-green-500 to-indigo-400 text-transparent bg-clip-text font-bold text-xl '
+                className=' font-Andika bg-gradient-to-r p-4 from-amber-400 via-green-500 to-indigo-400 text-transparent bg-clip-text font-bold text-xl '
                 >
                   Already Done
                 </button>
@@ -103,7 +108,17 @@ export default function QuizPageforDataScience() {
                 key={index}
                 className=' text-center '
                 >
-                  <a className=' cursor-default text-lg font-Montserrat font-semibold ' href={clue} target='_blank'>{clue}</a>
+                  {
+                    clue.includes("https") ? (
+                      <a className=' cursor-pointer text-lg font-Montserrat font-semibold ' href={clue} target='_blank'>{clue}</a>
+                    ):(
+                      <p
+                      className='text-lg font-Montserrat font-semibold cursor-default '
+                      >
+                        {clue}
+                      </p>
+                    )
+                  }
                 </h2>
               )
             })

@@ -1,6 +1,5 @@
 import React from "react";
 import psgLogoSvg from "../../assets/psgLogoSvg.svg";
-import amcsText from "../../assets/amcsText.svg";
 import CSLLogo from "../../assets/csl_logo.png";
 import KriyaLogo from "../../assets/KriyaLogo.png";
 export default function Nav() {
