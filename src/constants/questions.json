@@ -36,7 +36,7 @@
   },
   {
     "question": "I'm a tidy array, a tasktime guide, Sequential order, I won't hide. Check me off as progress flows, What am I in the tasks' repose? ",
-    "hints": [""],
+    "hints": ["todo","todolist"],
     "answer": ["checklist", "to-do list", "task", "task list"],
     "navigateTo": "/checklist",
     "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
