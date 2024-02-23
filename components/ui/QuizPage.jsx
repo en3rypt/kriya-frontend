@@ -13,19 +13,23 @@ export default function QuizPage({ index }) {
   const [selectedHTTPMethod, setselectedHTTPMethod] = useState("GET");
   const handleAnswerSubmissison = () => {
     if (checkAnswer(answer, index)) {
-      setanswer("");
       if (quizData[index]?.supportedMethods?.length > 0) {
         if (
           quizData[index]?.answerToHttpMethodUsage.includes(selectedHTTPMethod)
         ) {
-          setHintsIndex(-1);
-          setselectedHTTPMethod("GET");
           navigate(quizData[index].navigateTo);
+          setanswer("");
+          setHintsIndex(-1);
+          setShowHint(false);
+          setselectedHTTPMethod("GET");
         } else {
           alert("Please select correct http method");
         }
       }
       if (quizData[index]?.supportedMethods?.length === undefined) {
+        setanswer("");
+        setHintsIndex(-1);
+        setShowHint(false);
         navigate(quizData[index].navigateTo);
       }
     } else {
