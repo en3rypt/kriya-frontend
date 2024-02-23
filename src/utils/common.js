@@ -6,6 +6,14 @@ export const checkAnswer = (text, index) => {
     const stemmer = Snowball.newStemmer("English");
     const words = text.split(/\s+/);
     const stemmedWords = words.map((word) => stemmer.stem(word));
-    const answerMatch = stemmedWords.filter(answer => answers.includes(answer));
+    const stemmedAnswers = new Set();
+
+    answers.forEach((answer) =>
+        answer.split(/\s+/).forEach((word) => stemmedAnswers.add(stemmer.stem(word)))
+    );
+    console.log("🚀 ~ checkAnswer ~ stemmedAnswers:", stemmedAnswers)
+    const answerMatch = stemmedWords.filter((answer) => stemmedAnswers.has(answer));
+
+
     return answerMatch.length > 0;
 };

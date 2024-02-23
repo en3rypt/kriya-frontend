@@ -5,7 +5,7 @@
       "I bring order to chaos, a digital librarian's touch,I'm a shared notation, a virtual pocket for your mind's hutch.",
       "I'm not just black and white, but a palette so grand, a canvas for thoughts, designed to stand,Like a digital scroll."
     ],
-    "answer": ["note", "notes app"],
+    "answer": ["note", "notes app", "note making app"],
     "navigateTo": "/notes"
   },
   {
@@ -15,7 +15,7 @@
       "I am associated with the start of something new, the emergence of something unique and never before seen.",
       "I am the answer to what do you do with an idea?"
     ],
-    "answer": ["creat"],
+    "answer": ["create", "create new", "new"],
     "supportedMethods": ["POST", "GET", "PUT", "DELETE", "PATCH"],
     "answerToHttpMethodUsage": ["POST"],
     "navigateTo": "/create"
@@ -26,7 +26,14 @@
       " I help make things clearer, removing confusion and enhancing understanding.",
       "I play with words, but I'm not a dictionary. I can change their appearance, meaning, and even order."
     ],
-    "answer": ["text edit", "edit", "edit"],
+    "answer": [
+      "text edit",
+      "edit",
+      "edit",
+      "format",
+      "text format",
+      "formatting"
+    ],
     "navigateTo": "/text-edit",
     "supportedMethods": ["POST", "GET", "PUT", "DELETE", "PATCH"],
     "answerToHttpMethodUsage": ["PUT", "PATCH"]
@@ -48,7 +55,15 @@
       "I exist in a physical or digital form, a written reminder of your obligations and desires.",
       "Tasks on me can be ticked off as completed, bringing satisfaction and progress."
     ],
-    "answer": ["checklist", "to-do list", "task", "task list"],
+    "answer": [
+      "checklist",
+      "to-do list",
+      "task",
+      "task list",
+      "to do",
+      "to-do list",
+      "to do list"
+    ],
     "navigateTo": "/checklist",
     "supportedMethods": ["POST", "GET", "PUT", "DELETE", "PATCH"],
     "answerToHttpMethodUsage": ["PUT", "DELETE"]

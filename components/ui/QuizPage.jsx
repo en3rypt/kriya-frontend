@@ -13,12 +13,12 @@ export default function QuizPage({ index }) {
   const [selectedHTTPMethod, setselectedHTTPMethod] = useState("GET");
   const handleAnswerSubmissison = () => {
     if (checkAnswer(answer, index)) {
+      setanswer("");
       if (quizData[index]?.supportedMethods?.length > 0) {
         if (
           quizData[index]?.answerToHttpMethodUsage.includes(selectedHTTPMethod)
         ) {
           setHintsIndex(-1);
-          setanswer("");
           setselectedHTTPMethod("GET");
           navigate(quizData[index].navigateTo);
         } else {
