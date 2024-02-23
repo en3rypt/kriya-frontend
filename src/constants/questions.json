@@ -11,48 +11,65 @@
   {
     "question": "I mark the dawn of innovation, the birth of a unique sensation,In the plaound of ideas, I am the starting cheer.",
     "hints": [
-      "I begin with a tap, a digital rap. A click or a swipe, I come to life.  "
+      "I begin with a tap, a digital rap. A click or a swipe, I come to life.  ",
+      "I am associated with the start of something new, the emergence of something unique and never before seen.",
+      "I am the answer to what do you do with an idea?"
     ],
     "answer": ["creat"],
-    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
-    "answerToHttpMethodUsage":["POST"],
+    "supportedMethods": ["POST", "GET", "PUT", "DELETE", "PATCH"],
+    "answerToHttpMethodUsage": ["POST"],
     "navigateTo": "/create"
   },
   {
     "question": "I let you change how words appear, Make them bold or just a bit clear. With a click, you can rearrange, In the world of text, I bring the change.",
-    "hints": [],
+    "hints": [
+      " I help make things clearer, removing confusion and enhancing understanding.",
+      "I play with words, but I'm not a dictionary. I can change their appearance, meaning, and even order."
+    ],
     "answer": ["text edit", "edit", "edit"],
     "navigateTo": "/text-edit",
-    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
-    "answerToHttpMethodUsage":["PUT","PATCH"]
+    "supportedMethods": ["POST", "GET", "PUT", "DELETE", "PATCH"],
+    "answerToHttpMethodUsage": ["PUT", "PATCH"]
   },
   {
     "question": "In the realm of notes, a seeker am I, No pages to flip, nor a vast sky. I find what's lost with digital grace, What am I, in the data embrace? ",
-    "hints": [],
+    "hints": [
+      "With words as your tools, you unlock the answers I hold within.",
+      " My purpose is to assist in finding what you need, like a tireless seeker of answers."
+    ],
     "answer": ["search", "search bar"],
     "navigateTo": "/search",
-    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
-    "answerToHttpMethodUsage":["GET"]
+    "supportedMethods": ["POST", "GET", "PUT", "DELETE", "PATCH"],
+    "answerToHttpMethodUsage": ["GET"]
   },
   {
     "question": "I'm a tidy array, a tasktime guide, Sequential order, I won't hide. Check me off as progress flows, What am I in the tasks' repose? ",
-    "hints": ["todo","todolist"],
+    "hints": [
+      "I exist in a physical or digital form, a written reminder of your obligations and desires.",
+      "Tasks on me can be ticked off as completed, bringing satisfaction and progress."
+    ],
     "answer": ["checklist", "to-do list", "task", "task list"],
     "navigateTo": "/checklist",
-    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
-    "answerToHttpMethodUsage":["PUT","DELETE"]
+    "supportedMethods": ["POST", "GET", "PUT", "DELETE", "PATCH"],
+    "answerToHttpMethodUsage": ["PUT", "DELETE"]
   },
   {
     "question": "I linger not at the task's inception, My whisper emerges on the path's reflection. As moments elapse and deadlines near, I subtly arrive, a temporal seer. I organize your mind's maze, With colors, tags, and different ways. ",
-    "hints": [],
+    "hints": [
+      "My purpose is to trigger action, prompting you to complete a specific task or event.",
+      " My purpose is to assist in finding what you need, like a tireless seeker of answers."
+    ],
     "answer": ["remind", "notif", "alarm", "alert"],
     "navigateTo": "/reminder",
-    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
-    "answerToHttpMethodUsage":["POST","GET"]
+    "supportedMethods": ["POST", "GET", "PUT", "DELETE", "PATCH"],
+    "answerToHttpMethodUsage": ["POST", "GET"]
   },
   {
     "question": "I'm not a word, but I'm still part of the page, What am I, adding a visual engage?",
-    "hints": [],
+    "hints": [
+      "Use me wisely, and I can spark imagination, understanding, and connection.",
+      "I can be a photograph, illustration, painting, or even a symbol, each with its own unique qualities"
+    ],
     "answer": [
       "image attach",
       "imag",
@@ -66,12 +83,15 @@
       "add photo"
     ],
     "navigateTo": "/image-attachment",
-    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
-    "answerToHttpMethodUsage":["POST"]
+    "supportedMethods": ["POST", "GET", "PUT", "DELETE", "PATCH"],
+    "answerToHttpMethodUsage": ["POST"]
   },
   {
     "question": "From existence, I depart,sweeping away in one swift zoom,a removal with digital art.",
-    "hints": ["With a click, I disappear, vanishing without a tear."],
+    "hints": [
+      "With a click, I disappear, vanishing without a tear.",
+      " I am associated with taking something away, making an alteration or deletion."
+    ],
     "answer": [
       "delet",
       "remov",
@@ -83,7 +103,7 @@
       "trash not"
     ],
     "navigateTo": "/congrats",
-    "supportedMethods":["POST","GET","PUT","DELETE","PATCH"],
-    "answerToHttpMethodUsage":["DELETE"]
+    "supportedMethods": ["POST", "GET", "PUT", "DELETE", "PATCH"],
+    "answerToHttpMethodUsage": ["DELETE"]
   }
 ]

@@ -82,8 +82,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/instructions",
-    element:<GeneralInstructions domain="cyber" />,
-  }
+    element: <GeneralInstructions domain="cyber" />,
+  },
+  {
+    path: "/general-instructions",
+    element: <GeneralInstructions domain="cyber" />,
+  },
 ]);
 
 export default router;
